@@ -1,9 +1,11 @@
 html, body {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-    background-color: darkseagreen;
+    background: url("https://media.giphy.com/media/TZf4ZyXb0lXXi/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: 1.2em;
-    color: #820e57;
+    color: white;
 }
 button{
     background-color: lightgray;
@@ -12,8 +14,8 @@ button{
     border-style: groove;
 }
 button:hover{
-    background-color: #820e57;
-    border: none
+    background-color: #80e5ff;
+    border: none;
 }
 input, select{
     font-size: 14px;
@@ -24,6 +26,9 @@ input, select{
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
+    background: rgba(184, 184, 184, .5);
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .visible{
     display: none;
@@ -32,7 +37,12 @@ h1, h3{
     font-family: 'Oswald', sans-serif;
 }
 #header{
-    
+    color: transparent;
+    background-image: url("giphy.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    margin-top: 0;
 }
 li{
     list-style: none;
@@ -42,9 +52,10 @@ li{
     width: 40px;
     height: 40px;
     /*background-color: #820e57;*/
-    background: url(kirby-removebg.png);
+    background: url(Rebel_symbol-removebg.png);
     background-position: center;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 100px auto;
     -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
     animation: sk-rotateplane 1.2s infinite ease-in-out;
