@@ -10,7 +10,7 @@
 const $ = require('jQuery');
 const {getMovies} = require('./api.js');
 const updateMovies = (() => {
-    $('#loading').html(`<p id="loading">Loading...</p>`)
+    $('#loading').html(`<div class="spinner"></div>`)
     getMovies().then((movies) => {
         $('#loading').html(`<p id=loading>Here are all the movies:</p>`);
         movies.forEach(({title, rating, id}) => {

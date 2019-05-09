@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "title": "Toy Story",
+      "title": "Train wreck",
       "rating": "5",
       "id": 2
     },
@@ -9,11 +9,6 @@
       "title": "Casablanca",
       "rating": "4",
       "id": 4
-    },
-    {
-      "title": "Zoolander",
-      "rating": "3",
-      "id": 5
     },
     {
       "title": "Star Wars: A New Hope",
