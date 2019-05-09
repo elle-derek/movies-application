@@ -8,8 +8,14 @@
 <body>
     <p id="loading">Loading...</p>
     <select name="movieSelect" id="movieSelect">
-
     </select>
+    <button type="submit" id="edit">Edit</button>
+    <form id="editForm" class="visible">
+    <input type="text" id="newMovieTitle" name="newMovieTitle" placeholder="Edit Movie Name">
+    <input type="text" id="newRating" name="newRating" placeholder="Enter Rating">
+    <button type="submit" id="submitEdit">Submit</button>
+    </form>
+
     <div class="container">
         <h1>Hello There!</h1>
         <p>To get started, edit <code>src/index.js</code>.</p>

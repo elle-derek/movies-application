@@ -25,11 +25,24 @@ const updateMovies = (()=>{
   });
 });
 const buildDropDown = (() => {
+  $('#movieSelect').empty();
   getMovies().then((movies) => {
     movies.forEach(({title, rating, id}) => {
-      $('#movieSelect').append(`<option value="${title}">${title}</option>`)
+      $('#movieSelect').append(`<option value="${title}${id}${rating}">${title} ${rating}</option>`)
     })
   })
+});
+$('#edit').click(function(){
+  let movieToEdit = $('#movieSelect').val();
+  console.log(movieToEdit)
+  let ratingToEdit = movieToEdit.substring(movieToEdit.length - 1, movieToEdit.length);
+  movieToEdit = movieToEdit.substring(0, movieToEdit.length - 2 );
+
+  console.log(movieToEdit);
+  console.log(ratingToEdit);
+  $('#editForm').toggleClass("visible");
+  $('#newMovieTitle').replaceWith(`<input type="text" id="newMovieTitle" name="newMovieTitle" placeholder=${movieToEdit}>`)
+  $('#newRating').replaceWith(`    <input type="text" id="newRating" name="newRating" placeholder=${ratingToEdit}>`)
 });
 
 $('#subBttn').click(function(){
@@ -43,3 +56,22 @@ $('#subBttn').click(function(){
  updateMovies();
 });
 updateMovies();
+
+$('#submitEdit').click(function(e){
+  e.preventDefault();
+  let movieTitle = $('#newMovieTitle').val();
+  let rating = $("#newRating").val();
+  let id = $('#movieSelect').val();
+  id = id.substring(id.length - 2, id.length - 1);
+  console.log(id);
+  const movie = {
+    "title": movieTitle,
+    "rating": rating
+  };
+  $.ajax(`/api/movies/${id}`, {
+    method:'PATCH',
+    data: JSON.stringify(movie),
+   contentType: 'application/json'
+  });
+updateMovies();
+});
