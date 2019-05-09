@@ -15,14 +15,21 @@ const updateMovies = (()=>{
     movies.forEach(({title, rating, id}) => {
       $('#loading').append(`<ul>
 <li>id#${id} - ${title} - rating: ${rating}</li>
-</ul>`)
-    });
-  }).catch((error) => {
+</ul>`)})
+  }).then(()=>{
+    buildDropDown();
+  })
+      .catch((error) => {
     alert('Oh no! Something went wrong.\nCheck the console for details.')
     console.log(error);
   });
-
-
+});
+const buildDropDown = (() => {
+  getMovies().then((movies) => {
+    movies.forEach(({title, rating, id}) => {
+      $('#movieSelect').append(`<option value="${title}">${title}</option>`)
+    })
+  })
 });
 
 $('#subBttn').click(function(){
