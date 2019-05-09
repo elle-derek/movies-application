@@ -15,7 +15,7 @@ const updateMovies = (() => {
         $('#loading').html(`<h3 id=loading>Here are all the movies:</h3>`);
         movies.forEach(({title, rating, id}) => {
             $('#loading').append(`<ul>
-<li>id#${id} - ${title} - rating: ${rating}</li>
+<li>${title} - rating: ${rating}</li>
 <button type="submit" value=${id} class="del">Delete</button>
 </ul>`)
         })

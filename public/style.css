@@ -13,6 +13,7 @@ button{
 }
 button:hover{
     background-color: #820e57;
+    border: none
 }
 input, select{
     font-size: 14px;
