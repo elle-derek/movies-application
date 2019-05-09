@@ -1,7 +1,21 @@
 html, body {
     height: 100%;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: darkseagreen;
+    font-size: 1.2em;
+    color: #820e57;
+}
+button{
+    background-color: lightgray;
+    border-radius: 8px;
+    font-size: 14px;
+    border-style: groove;
+}
+button:hover{
+    background-color: #820e57;
+}
+input, select{
+    font-size: 14px;
 }
 
 .container {
@@ -13,11 +27,11 @@ html, body {
 .visible{
     display: none;
 }
-h1{
+h1, h3{
     font-family: 'Oswald', sans-serif;
 }
 #header{
-    text
+    
 }
 li{
     list-style: none;
@@ -26,8 +40,10 @@ li{
 .spinner {
     width: 40px;
     height: 40px;
-    background-color: #333;
-
+    /*background-color: #820e57;*/
+    background: url(kirby-removebg.png);
+    background-position: center;
+    background-size: contain;
     margin: 100px auto;
     -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
     animation: sk-rotateplane 1.2s infinite ease-in-out;

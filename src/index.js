@@ -12,7 +12,7 @@ const {getMovies} = require('./api.js');
 const updateMovies = (() => {
     $('#loading').html(`<div class="spinner"></div>`)
     getMovies().then((movies) => {
-        $('#loading').html(`<p id=loading>Here are all the movies:</p>`);
+        $('#loading').html(`<h3 id=loading>Here are all the movies:</h3>`);
         movies.forEach(({title, rating, id}) => {
             $('#loading').append(`<ul>
 <li>id#${id} - ${title} - rating: ${rating}</li>
