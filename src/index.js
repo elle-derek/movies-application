@@ -64,6 +64,7 @@ updateMovies();
 
 $('#submitEdit').click(function (e) {
     e.preventDefault();
+    $('#editForm').toggleClass("visible");
     let movieTitle = $('#newMovieTitle').val();
     let rating = $("#newRating").val();
     let id = $('#movieSelect').val();

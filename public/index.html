@@ -4,25 +4,28 @@
     <meta charset="UTF-8" />
     <title>My Application</title>
     <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+
 </head>
 <body>
-    <p id="loading">Loading...</p>
-    <!--<div id="load" class="spinner"></div>-->
-    <select name="movieSelect" id="movieSelect">
-    </select>
-    <button type="submit" id="edit">Edit</button>
-    <form id="editForm" class="visible">
-    <input type="text" id="newMovieTitle" name="newMovieTitle">
-    <input type="text" id="newRating" name="newRating">
-    <button type="submit" id="submitEdit">Submit</button>
-    </form>
+
 
     <div class="container">
-        <h1>Hello There!</h1>
-        <p>To get started, edit <code>src/index.js</code>.</p>
+        <h1 id="header">Hello There!</h1>
+        <p>Start By Entering A Movie Here!</p>
         <input type="text" id="movieTitle" name="movieTitle" placeholder="Enter Movie Name">
         <input type="text" id="rating" name="rating" placeholder="Enter Rating">
         <button type="submit" id="subBttn">Submit</button>
+
+        <p id="loading">Loading...</p>
+        <select name="movieSelect" id="movieSelect">
+        </select>
+        <button type="submit" id="edit">Edit</button>
+        <form id="editForm" class="visible">
+            <input type="text" id="newMovieTitle" name="newMovieTitle">
+            <input type="text" id="newRating" name="newRating">
+            <button type="submit" id="submitEdit">Submit</button>
+        </form>
     </div>
 
     <script src="./main.js"></script>
