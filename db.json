@@ -2,7 +2,7 @@
   "movies": [
     {
       "title": "Iron Man",
-      "rating": "4",
+      "rating": "5",
       "id": 2,
       "genre": "Sci-Fi"
     },
@@ -13,10 +13,10 @@
       "genre": "Comedy"
     },
     {
-      "title": "Free movie",
-      "rating": "3",
-      "genre": "Comedy",
-      "id": 4
+      "title": "Casablanca",
+      "rating": "4",
+      "genre": "Drama",
+      "id": 5
     }
   ]
 }

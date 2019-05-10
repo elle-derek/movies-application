@@ -21,7 +21,7 @@ const updateMovies = (() => {
         })
     }).then(() => {
         buildDropDown();
-        addGenre();
+        // addGenre();
     })
         .catch((error) => {
             alert('Oh no! Something went wrong.\nCheck the console for details.');
@@ -32,7 +32,7 @@ const buildDropDown = (() => {
     $('#movieSelect').empty();
     getMovies().then((movies) => {
         movies.forEach(({title, rating, id, genre}) => {
-            $('#movieSelect').append(`<option value="${title}:${id}:${rating}:${genre}">${title} ${rating}</option>`)
+            $('#movieSelect').append(`<option value="${title}:${id}:${rating}:${genre}">${title}</option>`)
         })
     })
 });
@@ -73,6 +73,7 @@ updateMovies();
 const clearMovieInfo = (()=>{
     document.getElementById("movieTitle").value = "";
     document.getElementById("rating").value = "";
+    document.getElementById("genre").value = "";
 });
 
 $('#submitEdit').click(function (e) {
@@ -95,22 +96,22 @@ $('#submitEdit').click(function (e) {
     });
     updateMovies();
 });
-const addGenre = (()=> {
-    const movie = {
-        "genre": "to be defined"
-    };
-    getMovies().then((movies)=>{
-        movies.forEach((title, index)=>{
-            $.ajax(`/api/movies/${title[index]}`, {
-                method: 'PATCH',
-                data: JSON.stringify(movie),
-                contentType: 'application/json'
-            });
-        });
-    });
-
-
-});
+// const addGenre = (()=> {
+//     const movie = {
+//         "genre": "to be defined"
+//     };
+//     getMovies().then((movies)=>{
+//         movies.forEach((title, index)=>{
+//             $.ajax(`/api/movies/${title[index]}`, {
+//                 method: 'PATCH',
+//                 data: JSON.stringify(movie),
+//                 contentType: 'application/json'
+//             });
+//         });
+//     });
+//
+//
+// });
 
 
 $(document).on('click', '.del', function (e) {
