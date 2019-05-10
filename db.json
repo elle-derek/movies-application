@@ -1,14 +1,22 @@
 {
   "movies": [
     {
-      "title": "Star Wars: A  New Hope",
+      "title": "Iron Man",
       "rating": "4",
-      "id": 1
+      "id": 2,
+      "genre": "Sci-Fi"
     },
     {
-      "title": "Iron Man 3",
+      "title": "Zoolander",
       "rating": "2",
-      "id": 2
+      "id": 3,
+      "genre": "Comedy"
+    },
+    {
+      "title": "Free movie",
+      "rating": "3",
+      "genre": "Comedy",
+      "id": 4
     }
   ]
 }
